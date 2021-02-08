@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap');
+
+$--primary-color: hsl(263, 55%, 52%);
+$--very-dark-grayish-blue: hsl(217, 19%, 35%);
+$--very-dark-blackish-blue: hsl(219, 29%, 14%);
+$--white: hsl(0, 0%, 100%);
+
+$--light-gray: hsl(0, 0%, 81%);
+$--light-grayish-blue: hsl(210, 46%, 95%);
+
+
+body {
+    font-family: 'Barlow', sans-serif;
+    background: $--light-grayish-blue;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-wrapper {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 76vh;
+}
+
+.card-wrapper-left {
+    width: 72%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-wrapper-right {
+    width: 28%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-wrapper-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 47%;
+}
+
+.card-wrapper-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 47%;
+}
+
+.purple-card {
+    width: 66%;
+    height: 100%;
+    border-radius: 10px;
+    background: $--primary-color;
+    color: $--white;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/img/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    background-position-y: top;
+}
+
+.gray-card {
+    color: $--white;
+    background: $--very-dark-grayish-blue;
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.white-card {
+    background: $--white;
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 30px rgba($color: #000000, $alpha: 0.1);
+}
+
+.dark-gray-card {
+    color: $--white;
+    background: $--very-dark-blackish-blue;
+    width: 66%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.white-long-card {
+    width: 80%;
+    height: 100%;
+    background: $--white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    box-shadow: 15px 15px 40px rgba($color: #000000, $alpha: 0.1);
+
+}
+
+.white-long-card .author-container {
+    height: 8%;
+}
+
+.author-container {
+    display: flex;
+    height: 15%;
+    align-items: center;
+}
+
+.author-container div:nth-child(1){
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.author-container div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.author-container img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.purple-circle{
+    border: 2px solid $--primary-color;
+
+}
+
+.purple-opac-circle{
+    border: 2px solid rgba($--white, $alpha: 0.3);
+}
+
+.author-container h4 {
+    font-size: 12px;
+}
+
+.author-container h5 {
+    font-size: 12px;
+    opacity: 50%;
+    margin-top: 5px;
+}
+
+.text-container {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.text-container h1 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.text-container p {
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 50%;
+    margin-top: 20px;
+    line-height: 18px;
+}
+
+@media screen and (max-width: 992px) {
+    .card-wrapper {
+        width: 90%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .card-wrapper-left{
+        width: 100%;
+        height: 200vh;
+    }
+
+    .card-wrapper-right{
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-wrapper-top{
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .card-wrapper-bottom{
+        height: 94%;
+        flex-direction: column;
+        margin-top: 35px;
+    }
+
+    .purple-card {
+        height: 480px;
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .gray-card {
+        height: 250px;
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .white-card {
+        height: 230px;
+        width: 100%;
+    }
+
+    .dark-gray-card {
+        height: 500px;
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .white-long-card{
+        height: 500px;
+        width: 100%;
+        margin:35px 0px;
+    }
+
+  }
